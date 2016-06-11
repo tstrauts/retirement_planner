@@ -1,0 +1,64 @@
+<div class="page-header">
+  <h2>Results</h2>
+</div>
+<div class="row">
+  <div class="col-sm-2">
+    Pre-Retirement Return
+  </div>
+  <div class="col-sm-2">
+    <%=  number_with_precision(@preret_return*100, :precision => 1, :delimiter => ',') %>%
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-2">
+    Retirement Return
+  </div>
+  <div class="col-sm-2">
+    <%= number_with_precision(@ret_return*100, :precision => 1, :delimiter => ',') %>%
+  </div>
+</div>
+
+<%= high_chart("some_id", @chart) %>
+<%= high_chart("my_bar_div", @bar) %>
+<table class="table table-striped table-responsive">
+  <thead>
+    <tr>
+      <th>Age</th>
+      <th>Account Balance</th>
+      <th>Savings</th>
+      <th>Social Security Income</th>
+      <th>Pension Income</th>
+      <th>Other Income</th>
+      <th>Portfolio Distibutions</th>
+      <th>Estimated Tax</th>
+      <th>Investment Return</th>
+      <th>Annual Spending</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% (1..@length).each do |x| %>
+    <tr>
+      <td><%= @age[x] %></td>
+      <td><%= number_with_precision(@account_balance[x], :precision => 0, :delimiter => ',') %></td>
+      <td><%= number_with_precision(@savings[x], :precision => 0, :delimiter => ',') %></td>
+      <td><%= number_with_precision(@income_soc_sec[x], :precision => 0, :delimiter => ',') %></td>
+      <td><%= number_with_precision(@income_pension[x], :precision => 0, :delimiter => ',') %></td>
+      <td><%= number_with_precision(@income_other[x], :precision => 0, :delimiter => ',') %></td>
+      <td><%= number_with_precision(@portfolio_distributions[x], :precision => 0, :delimiter => ',') %></td>
+      <td><%= number_with_precision(@est_tax[x], :precision => 0, :delimiter => ',') %></td>
+      <td><%= number_with_precision(@inv_return[x], :precision => 0, :delimiter => ',') %></td>
+      <td><%= number_with_precision(@annual_spending[x], :precision => 0, :delimiter => ',') %></td>
+    </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<div class="btn-group btn-group-justified">
+  <a href="/scenarios" class="btn btn-primary">
+    Back
+  </a>
+  <a href="/scenarios/<%= @scenario.id %>/edit" class="btn btn-warning">
+    Edit
+  </a>
+</div>

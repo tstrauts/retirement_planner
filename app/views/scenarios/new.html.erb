@@ -1,0 +1,364 @@
+<!-- Validation failure messages -->
+<% if @scenario.errors.any? %>
+<% @scenario.errors.full_messages.each do |message| %>
+<div class="alert alert-dismissable alert-danger">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  <%= message %>
+</div>
+<% end %>
+<% end %>
+
+<div class="page-header">
+  <h2>Create Scenario</h2>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_scenario" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for user_id -->
+      <div class="form-group">
+        <input type="hidden" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= current_user.id %>">
+      </div>
+
+      <!-- Label and input for name -->
+      <div class="form-group row">
+        <label for="name" class=" col-sm-2 control-label">
+          Name
+        </label>
+        <div class="col-sm-8">
+          <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @scenario.name %>">
+        </div>
+      </div>
+      <!-- Label and input for description -->
+      <div class="form-group row">
+        <label for="description" class="col-sm-2 control-label">
+          Description
+        </label>
+        <div class="col-sm-8">
+          <textarea id="description" name="description" placeholder="Description" class="form-control" rows="3"><%= @scenario.description %></textarea>
+        </div>
+      </div>
+
+      <div class="page-header">
+        <h3>Personal Info</h3>
+      </div>
+      <!-- Label and input for current_age and life expectancy-->
+      <div class="form-group row">
+        <label for="current_age" class="col-sm-2 control-label">
+          Current age
+        </label>
+        <div class="col-sm-2  ">
+          <input type="text" id="current_age" name="current_age" placeholder="Current age" class="form-control" value="25">
+        </div>
+        <label for="life_expectancy" class="col-sm-2 control-label">
+          Life expectancy
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="life_expectancy" name="life_expectancy" placeholder="Life expectancy" class="form-control" value="95">
+        </div>
+      </div>
+      <div class="row">
+        <h4><span class="col-sm-2 label label-pill label-default">Accounts</span></h4>
+        <h4><span class="col-sm-2 label label-pill label-primary">Current Balance</span></h4>
+        <h4><span class="col-sm-2 label label-pill label-success">Annual Savings</span></h4>
+      </div>
+      <!-- Label and input for retplan_assets -->
+      <div class="form-group row">
+        <label for="retplan_assets" class="col-sm-2 control-label">
+          Retirement Plan
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="retplan_assets" name="retplan_assets" placeholder="Retplan assets" class="form-control" value="0">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" id="retplan_savings" name="retplan_savings" placeholder="Retplan savings" class="form-control" value="0">
+        </div>
+        <div class="checkbox col-sm-4">
+          <label for="retplan_inflation">
+            <input type="checkbox" id="retplan_inflation" name="retplan_inflation" value="1" <%= "checked" if @scenario.retplan_inflation %>>
+            Increase Contributions Annually For Inflation
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="tradira_assets" class="col-sm-2 control-label">
+          Traditional IRA
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="tradira_assets" name="tradira_assets" placeholder="Tradira assets" class="form-control" value="0">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" id="tradira_savings" name="tradira_savings" placeholder="Tradira savings" class="form-control" value="0">
+        </div>
+        <div class="checkbox col-sm-4">
+          <label for="tradira_inflation">
+            <input type="checkbox" id="tradira_inflation" name="tradira_inflation" value="1" <%= "checked" if @scenario.tradira_inflation %>>
+            Increase Contributions Annually For Inflation
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="rothira_assets" class="col-sm-2 control-label">
+          Roth IRA
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="rothira_assets" name="rothira_assets" placeholder="Rothira assets" class="form-control" value="0">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" id="rothira_savings" name="rothira_savings" placeholder="Rothira savings" class="form-control" value="0">
+        </div>
+        <div class="checkbox col-sm-4">
+          <label for="rothira_inflation">
+            <input type="checkbox" id="rothira_inflation" name="rothira_inflation" value="1" <%= "checked" if @scenario.rothira_inflation %>>
+            Increase Contributions Annually For Inflation
+          </label>
+        </div>
+      </div>
+      <!-- Label and input for taxaccount_assets -->
+      <div class="form-group row">
+        <label for="taxaccount_assets" class="col-sm-2 control-label">
+          Taxable Account
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="taxaccount_assets" name="taxaccount_assets" placeholder="Taxaccount assets" class="form-control" value="0">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" id="taxaccount_savings" name="taxaccount_savings" placeholder="Taxaccount savings" class="form-control" value="0">
+        </div>
+        <div class="checkbox col-sm-4">
+          <label for="taxaccount_inflation">
+            <input type="checkbox" id="taxaccount_inflation" name="taxaccount_inflation" value="1" <%= "checked" if @scenario.taxaccount_inflation %>>
+            Increase Contributions Annually For Inflation
+          </label>
+        </div>
+      </div>
+
+      <div class="page-header">
+        <h3>Pre-Retirement Portfolio</h3>
+      </div>
+      <div class="row">
+        <h4><span class="col-sm-2 label label-pill label-default">Asset Class</span></h4>
+        <h4><span class="col-sm-2 label label-pill label-primary">Allocation %</span></h4>
+        <h4><span class="col-sm-2 label label-pill label-success">Expected Return</span></h4>
+      </div>
+
+      <!-- Label and input for usstocks_alloc_pre -->
+      <div class="form-group row">
+        <label for="usstocks_alloc_pre" class="col-sm-2 control-label">
+          U.S. Stocks
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="usstocks_alloc_pre" name="usstocks_alloc_pre" placeholder="Usstocks alloc pre" class="form-control" value="50">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" id="usstocks_ret_pre" name="usstocks_ret_pre" placeholder="Usstocks ret pre" class="form-control" value="8.0">
+        </div>
+      </div>
+      <!-- Label and input for intlstocks_alloc_pre -->
+      <div class="form-group row">
+        <label for="intlstocks_alloc_pre" class="col-sm-2 control-label">
+          International Stocks
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="intlstocks_alloc_pre" name="intlstocks_alloc_pre" placeholder="Intlstocks alloc pre" class="form-control" value="30">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" id="intlstocks_ret_pre" name="intlstocks_ret_pre" placeholder="Intlstocks ret pre" class="form-control" value="9.0">
+        </div>
+      </div>
+      <!-- Label and input for bonds_alloc_pre -->
+      <div class="form-group row">
+        <label for="bonds_alloc_pre" class="col-sm-2 control-label">
+          Fixed Income
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="bonds_alloc_pre" name="bonds_alloc_pre" placeholder="Bonds alloc pre" class="form-control" value="20">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" id="bonds_ret_pre" name="bonds_ret_pre" placeholder="Bonds ret pre" class="form-control" value="3.0">
+        </div>
+      </div>
+      <div class="page-header">
+        <h3>Retirement Portfolio</h3>
+      </div>
+      <div class="row">
+        <h4><span class="col-sm-2 label label-pill label-default">Asset Class</span></h4>
+        <h4><span class="col-sm-2 label label-pill label-primary">Allocation %</span></h4>
+        <h4><span class="col-sm-2 label label-pill label-success">Expected Return</span></h4>
+      </div>
+      <div class="form-group row">
+        <label for="usstocks_alloc_ret" class="col-sm-2 control-label">
+          U.S. Stocks
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="usstocks_alloc_ret" name="usstocks_alloc_ret" placeholder="Usstocks alloc ret" class="form-control" value="40">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" id="usstocks_ret_ret" name="usstocks_ret_ret" placeholder="Usstocks ret ret" class="form-control" value="8.0">
+        </div>
+      </div>
+      <!-- Label and input for intlstocks_alloc_ret -->
+      <div class="form-group row">
+        <label for="intlstocks_alloc_ret" class="col-sm-2 control-label">
+          International Stocks
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="intlstocks_alloc_ret" name="intlstocks_alloc_ret" placeholder="Intlstocks alloc ret" class="form-control" value="20">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" id="intlstocks_ret_ret" name="intlstocks_ret_ret" placeholder="Intlstocks ret ret" class="form-control" value="9.0">
+        </div>
+      </div>
+      <!-- Label and input for bonds_alloc_ret -->
+      <div class="form-group row">
+        <label for="bonds_alloc_ret" class="col-sm-2 control-label">
+          Fixed Income
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="bonds_alloc_ret" name="bonds_alloc_ret" placeholder="Bonds alloc ret" class="form-control" value="40">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" id="bonds_ret_ret" name="bonds_ret_ret" placeholder="Bonds ret ret" class="form-control" value="3.0">
+        </div>
+      </div>
+      <div class="page-header">
+        <h3>Guaranteed Income</h3>
+      </div>
+      <div class="row">
+        <h4><span class="col-sm-2 label label-pill label-default">Income Source</span></h4>
+        <h4><span class="col-sm-2 label label-pill label-primary">Annual Income</span></h4>
+        <h4><span class="col-sm-1 label label-pill label-success">Start Age</span></h4>
+      </div>
+      <div class="form-group row">
+        <label for="socialsecurity_income" class="col-sm-2 control-label">
+          Social Security
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="socialsecurity_income" name="socialsecurity_income" placeholder="Socialsecurity income" class="form-control" value="15000">
+        </div>
+        <div class="col-sm-1">
+          <input type="text" id="socialsecurity_startage" name="socialsecurity_startage" placeholder="Socialsecurity startage" class="form-control" value="67">
+        </div>
+        <div class="checkbox col-sm-4">
+          <label for="socialsecurity_inflation">
+            <input type="checkbox" id="socialsecurity_inflation" name="socialsecurity_inflation" value="1" <%= "checked" if @scenario.socialsecurity_inflation %>>
+            Increase Annually For Inflation
+          </label>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="pension_income" class="col-sm-2 control-label">
+          Pension income
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="pension_income" name="pension_income" placeholder="Pension income" class="form-control" value="0">
+        </div>
+        <div class="col-sm-1">
+          <input type="text" id="pension_startage" name="pension_startage" placeholder="Pension startage" class="form-control" value="65">
+        </div>
+        <div class="checkbox col-sm-4">
+          <label for="pension_inflation">
+            <input type="checkbox" id="pension_inflation" name="pension_inflation" value="1" <%= "checked" if @scenario.pension_inflation %>>
+            Increase Annually For Inflation
+          </label>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="other_income" class="col-sm-2 control-label">
+          Other
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="other_income" name="other_income" placeholder="Other income" class="form-control" value="0">
+        </div>
+        <div class="col-sm-1">
+          <input type="text" id="other_startage" name="other_startage" placeholder="Other startage" class="form-control" value="65">
+        </div>
+        <div class="checkbox col-sm-4">
+          <label for="other_inflation">
+            <input type="checkbox" id="other_inflation" name="other_inflation" value="1" <%= "checked" if @scenario.other_inflation %>>
+            Increase Annually For Inflation
+          </label>
+        </div>
+      </div>
+
+      <div class="page-header">
+        <h3>Income Needs</h3>
+      </div>
+      <div class="row">
+        <h4><span class="col-sm-2 label label-pill label-default">Goal</span></h4>
+        <h4><span class="col-sm-2 label label-pill label-primary">Annual Spending</span></h4>
+        <h4><span class="col-sm-1 label label-pill label-success">Start Age</span></h4>
+        <h4><span class="col-sm-1 label label-pill label-success">End Age</span></h4>
+      </div>
+      <div class="form-group row">
+        <label for="education_expense" class="col-sm-2 control-label">
+          Education
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="education_expense" name="education_expense" placeholder="Education expense" class="form-control" value="0">
+        </div>
+        <div class="col-sm-1">
+          <input type="text" id="education_startage" name="education_startage" placeholder="Start" class="form-control" value="">
+        </div>
+        <div class="col-sm-1">
+          <input type="text" id="education_endage" name="education_endage" placeholder="End" class="form-control" value="">
+        </div>
+        <div class="checkbox col-sm-4">
+          <label for="education_inflation">
+            <input type="checkbox" id="education_inflation" name="education_inflation" value="1" <%= "checked" if @scenario.education_inflation %>>
+            Increase Annually For Inflation
+          </label>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="retirement_income" class="col-sm-2 control-label">
+          Retirement
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="retirement_income" name="retirement_income" placeholder="Retirement income" class="form-control" value="50000">
+        </div>
+        <div class="col-sm-1">
+          <input type="text" id="retirement_startage" name="retirement_startage" placeholder="Retirement startage" class="form-control" value="65">
+        </div>
+        <div class="col-sm-1">
+        </div>
+        <div class="checkbox col-sm-4">
+          <label for="retirement_inflation">
+            <input type="checkbox" id="retirement_inflation" name="retirement_inflation" value="1" <%= "checked" if @scenario.retirement_inflation %>>
+            Increase Annually For Inflation
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="inflation_rate" class="col-sm-2 control-label">
+          Inflation rate
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="inflation_rate" name="inflation_rate" placeholder="Inflation rate" class="form-control" value="3.0">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="ret_taxrate" class="col-sm-2 control-label">
+          Retirement Tax Rate
+        </label>
+        <div class="col-sm-2">
+          <input type="text" id="ret_taxrate" name="ret_taxrate" placeholder="Ret taxrate" class="form-control" value="15">
+        </div>
+      </div>
+
+
+
+      <button class="btn btn-success">
+        Create Scenario
+      </button>
+      or
+      <a href="/scenarios">Cancel</a>
+    </form>
+  </div>
+</div>

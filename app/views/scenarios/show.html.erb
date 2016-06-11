@@ -1,0 +1,166 @@
+<div class="page-header">
+  <h3>Scenario #<%= @scenario.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>User</dt>
+      <dd><%= @scenario.user_id %></dd>
+
+      <dt>Description</dt>
+      <dd><%= @scenario.description %></dd>
+
+      <dt>Name</dt>
+      <dd><%= @scenario.name %></dd>
+
+      <dt>Ret taxrate</dt>
+      <dd><%= @scenario.ret_taxrate %></dd>
+
+      <dt>Inflation rate</dt>
+      <dd><%= @scenario.inflation_rate %></dd>
+
+      <dt>Retirement inflation</dt>
+      <dd><%= @scenario.retirement_inflation %></dd>
+
+      <dt>Education inflation</dt>
+      <dd><%= @scenario.education_inflation %></dd>
+
+      <dt>Retirement startage</dt>
+      <dd><%= @scenario.retirement_startage %></dd>
+
+      <dt>Retirement income</dt>
+      <dd><%= @scenario.retirement_income %></dd>
+
+      <dt>Education endage</dt>
+      <dd><%= @scenario.education_endage %></dd>
+
+      <dt>Education startage</dt>
+      <dd><%= @scenario.education_startage %></dd>
+
+      <dt>Education expense</dt>
+      <dd><%= @scenario.education_expense %></dd>
+
+      <dt>Other inflation</dt>
+      <dd><%= @scenario.other_inflation %></dd>
+
+      <dt>Pension inflation</dt>
+      <dd><%= @scenario.pension_inflation %></dd>
+
+      <dt>Socialsecurity inflation</dt>
+      <dd><%= @scenario.socialsecurity_inflation %></dd>
+
+      <dt>Other startage</dt>
+      <dd><%= @scenario.other_startage %></dd>
+
+      <dt>Other income</dt>
+      <dd><%= @scenario.other_income %></dd>
+
+      <dt>Pension startage</dt>
+      <dd><%= @scenario.pension_startage %></dd>
+
+      <dt>Pension income</dt>
+      <dd><%= @scenario.pension_income %></dd>
+
+      <dt>Socialsecurity startage</dt>
+      <dd><%= @scenario.socialsecurity_startage %></dd>
+
+      <dt>Socialsecurity income</dt>
+      <dd><%= @scenario.socialsecurity_income %></dd>
+
+      <dt>Bonds ret ret</dt>
+      <dd><%= @scenario.bonds_ret_ret %></dd>
+
+      <dt>Intlstocks ret ret</dt>
+      <dd><%= @scenario.intlstocks_ret_ret %></dd>
+
+      <dt>Usstocks ret ret</dt>
+      <dd><%= @scenario.usstocks_ret_ret %></dd>
+
+      <dt>Bonds ret pre</dt>
+      <dd><%= @scenario.bonds_ret_pre %></dd>
+
+      <dt>Intlstocks ret pre</dt>
+      <dd><%= @scenario.intlstocks_ret_pre %></dd>
+
+      <dt>Usstocks ret pre</dt>
+      <dd><%= @scenario.usstocks_ret_pre %></dd>
+
+      <dt>Bonds alloc ret</dt>
+      <dd><%= @scenario.bonds_alloc_ret %></dd>
+
+      <dt>Intlstocks alloc ret</dt>
+      <dd><%= @scenario.intlstocks_alloc_ret %></dd>
+
+      <dt>Usstocks alloc ret</dt>
+      <dd><%= @scenario.usstocks_alloc_ret %></dd>
+
+      <dt>Bonds alloc pre</dt>
+      <dd><%= @scenario.bonds_alloc_pre %></dd>
+
+      <dt>Intlstocks alloc pre</dt>
+      <dd><%= @scenario.intlstocks_alloc_pre %></dd>
+
+      <dt>Usstocks alloc pre</dt>
+      <dd><%= @scenario.usstocks_alloc_pre %></dd>
+
+      <dt>Taxaccount inflation</dt>
+      <dd><%= @scenario.taxaccount_inflation %></dd>
+
+      <dt>Rothira inflation</dt>
+      <dd><%= @scenario.rothira_inflation %></dd>
+
+      <dt>Tradira inflation</dt>
+      <dd><%= @scenario.tradira_inflation %></dd>
+
+      <dt>Retplan inflation</dt>
+      <dd><%= @scenario.retplan_inflation %></dd>
+
+      <dt>Taxaccount savings</dt>
+      <dd><%= @scenario.taxaccount_savings %></dd>
+
+      <dt>Taxaccount assets</dt>
+      <dd><%= @scenario.taxaccount_assets %></dd>
+
+      <dt>Rothira savings</dt>
+      <dd><%= @scenario.rothira_savings %></dd>
+
+      <dt>Rothira assets</dt>
+      <dd><%= @scenario.rothira_assets %></dd>
+
+      <dt>Tradira savings</dt>
+      <dd><%= @scenario.tradira_savings %></dd>
+
+      <dt>Tradira assets</dt>
+      <dd><%= @scenario.tradira_assets %></dd>
+
+      <dt>Retplan savings</dt>
+      <dd><%= @scenario.retplan_savings %></dd>
+
+      <dt>Retplan assets</dt>
+      <dd><%= @scenario.retplan_assets %></dd>
+
+      <dt>Life expectancy</dt>
+      <dd><%= @scenario.life_expectancy %></dd>
+
+      <dt>Retirement age</dt>
+      <dd><%= @scenario.retirement_age %></dd>
+
+      <dt>Current age</dt>
+      <dd><%= @scenario.current_age %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/scenarios" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/scenarios/<%= @scenario.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_scenario/<%= @scenario.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>
