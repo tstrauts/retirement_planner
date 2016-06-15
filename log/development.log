@@ -9846,3 +9846,389 @@ Processing by ScenariosController#index as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
   Rendered scenarios/index.html.erb within layouts/application (4.0ms)
 Completed 200 OK in 132ms (Views: 128.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/retirement/5" for ::1 at 2016-06-10 21:29:27 -0500
+Processing by ScenariosController#retirement as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (0.5ms)[0m  SELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered scenarios/retirement.html.erb within layouts/application (108.1ms)
+Completed 200 OK in 241ms (Views: 214.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/scenarios" for ::1 at 2016-06-10 21:29:37 -0500
+Processing by ScenariosController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (0.0ms)[0m  SELECT "scenarios".* FROM "scenarios"
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered scenarios/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 120ms (Views: 114.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/retirement/10" for ::1 at 2016-06-10 21:29:39 -0500
+Processing by ScenariosController#retirement as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (0.0ms)[0m  SELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered scenarios/retirement.html.erb within layouts/application (91.5ms)
+Completed 200 OK in 225ms (Views: 213.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/scenarios" for ::1 at 2016-06-10 21:30:18 -0500
+Processing by ScenariosController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (0.0ms)[0m  SELECT "scenarios".* FROM "scenarios"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered scenarios/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 135ms (Views: 129.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenarios" for ::1 at 2016-06-10 21:33:17 -0500
+Processing by ScenariosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (0.5ms)[0m  SELECT "scenarios".* FROM "scenarios"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered scenarios/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 540ms (Views: 523.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/retirement/5" for ::1 at 2016-06-10 21:33:19 -0500
+Processing by ScenariosController#retirement as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (0.5ms)[0m  SELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered scenarios/retirement.html.erb within layouts/application (408.8ms)
+Completed 200 OK in 988ms (Views: 921.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/scenarios" for ::1 at 2016-06-10 21:34:17 -0500
+Processing by ScenariosController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (1.0ms)[0m  SELECT "scenarios".* FROM "scenarios"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered scenarios/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 148ms (Views: 142.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/scenarios/new" for ::1 at 2016-06-10 21:35:04 -0500
+Processing by ScenariosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered scenarios/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 457ms (Views: 405.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/create_scenario" for ::1 at 2016-06-10 21:37:15 -0500
+Processing by ScenariosController#create as HTML
+  Parameters: {"authenticity_token"=>"/ANXrTLul0nyAWf2oDawNZZksn6L5T3a/qaCnfwwpfcy+waWA6N1jgEnMCRn8c+hiMnPIEe7w3RHT/D62OxUHg==", "user_id"=>"1", "name"=>"First Retirement Plan", "description"=>"First plan", "current_age"=>"30", "life_expectancy"=>"100", "retplan_assets"=>"30000", "retplan_savings"=>"10000", "retplan_inflation"=>"1", "tradira_assets"=>"0", "tradira_savings"=>"0", "rothira_assets"=>"0", "rothira_savings"=>"1000", "rothira_inflation"=>"1", "taxaccount_assets"=>"0", "taxaccount_savings"=>"0", "usstocks_alloc_pre"=>"50", "usstocks_ret_pre"=>"8.0", "intlstocks_alloc_pre"=>"30", "intlstocks_ret_pre"=>"9.0", "bonds_alloc_pre"=>"20", "bonds_ret_pre"=>"3.0", "usstocks_alloc_ret"=>"40", "usstocks_ret_ret"=>"8.0", "intlstocks_alloc_ret"=>"20", "intlstocks_ret_ret"=>"9.0", "bonds_alloc_ret"=>"40", "bonds_ret_ret"=>"3.0", "socialsecurity_income"=>"20000", "socialsecurity_startage"=>"67", "socialsecurity_inflation"=>"1", "pension_income"=>"0", "pension_startage"=>"65", "other_income"=>"0", "other_startage"=>"65", "education_expense"=>"0", "education_startage"=>"", "education_endage"=>"", "retirement_income"=>"65000", "retirement_startage"=>"65", "retirement_inflation"=>"1", "inflation_rate"=>"3.0", "ret_taxrate"=>"15"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (13.5ms)[0m  INSERT INTO "scenarios" ("user_id", "description", "name", "ret_taxrate", "inflation_rate", "retirement_inflation", "retirement_startage", "retirement_income", "education_expense", "socialsecurity_inflation", "other_startage", "other_income", "pension_startage", "pension_income", "socialsecurity_startage", "socialsecurity_income", "bonds_ret_ret", "intlstocks_ret_ret", "usstocks_ret_ret", "bonds_ret_pre", "intlstocks_ret_pre", "usstocks_ret_pre", "bonds_alloc_ret", "intlstocks_alloc_ret", "usstocks_alloc_ret", "bonds_alloc_pre", "intlstocks_alloc_pre", "usstocks_alloc_pre", "rothira_inflation", "retplan_inflation", "taxaccount_savings", "taxaccount_assets", "rothira_savings", "rothira_assets", "tradira_savings", "tradira_assets", "retplan_savings", "retplan_assets", "life_expectancy", "current_age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", 1], ["description", "First plan"], ["name", "First Retirement Plan"], ["ret_taxrate", 15], ["inflation_rate", 3.0], ["retirement_inflation", "t"], ["retirement_startage", 65], ["retirement_income", 65000], ["education_expense", 0], ["socialsecurity_inflation", "t"], ["other_startage", 65], ["other_income", 0], ["pension_startage", 65], ["pension_income", 0], ["socialsecurity_startage", 67], ["socialsecurity_income", 20000], ["bonds_ret_ret", 3.0], ["intlstocks_ret_ret", 9.0], ["usstocks_ret_ret", 8.0], ["bonds_ret_pre", 3.0], ["intlstocks_ret_pre", 9.0], ["usstocks_ret_pre", 8.0], ["bonds_alloc_ret", 40], ["intlstocks_alloc_ret", 20], ["usstocks_alloc_ret", 40], ["bonds_alloc_pre", 20], ["intlstocks_alloc_pre", 30], ["usstocks_alloc_pre", 50], ["rothira_inflation", "t"], ["retplan_inflation", "t"], ["taxaccount_savings", 0], ["taxaccount_assets", 0], ["rothira_savings", 1000], ["rothira_assets", 0], ["tradira_savings", 0], ["tradira_assets", 0], ["retplan_savings", 10000], ["retplan_assets", 30000], ["life_expectancy", 100], ["current_age", 30], ["created_at", "2016-06-11 02:37:15.918053"], ["updated_at", "2016-06-11 02:37:15.918053"]]
+  [1m[36m (68.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/scenarios
+Completed 302 Found in 476ms (ActiveRecord: 82.6ms)
+
+
+Started GET "/scenarios" for ::1 at 2016-06-10 21:37:16 -0500
+Processing by ScenariosController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mScenario Load (1.0ms)[0m  [1mSELECT "scenarios".* FROM "scenarios"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered scenarios/index.html.erb within layouts/application (72.1ms)
+Completed 200 OK in 660ms (Views: 605.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/retirement/11" for ::1 at 2016-06-10 21:37:28 -0500
+Processing by ScenariosController#retirement as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (1.5ms)[0m  SELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered scenarios/retirement.html.erb within layouts/application (389.8ms)
+Completed 200 OK in 972ms (Views: 904.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/scenarios/11/edit" for ::1 at 2016-06-10 21:39:38 -0500
+Processing by ScenariosController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (1.5ms)[0m  SELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered scenarios/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 546ms (Views: 505.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/update_scenario/11" for ::1 at 2016-06-10 21:39:48 -0500
+Processing by ScenariosController#update as HTML
+  Parameters: {"authenticity_token"=>"Wfu0lJP8nsk1iscsPMLfsSnl7LIRZgcX9yGBBlmmg3uXA+WvorF8DsaskP77BaAlN0iR7N04+blOyPNhfXpykg==", "user_id"=>"1", "name"=>"First Retirement Plan", "description"=>"First plan", "current_age"=>"30", "life_expectancy"=>"100", "retplan_assets"=>"30000", "retplan_savings"=>"12000", "retplan_inflation"=>"1", "tradira_assets"=>"0", "tradira_savings"=>"0", "rothira_assets"=>"0", "rothira_savings"=>"1000", "rothira_inflation"=>"1", "taxaccount_assets"=>"0", "taxaccount_savings"=>"0", "usstocks_alloc_pre"=>"50", "usstocks_ret_pre"=>"8.0", "intlstocks_alloc_pre"=>"30", "intlstocks_ret_pre"=>"9.0", "bonds_alloc_pre"=>"20", "bonds_ret_pre"=>"3.0", "usstocks_alloc_ret"=>"40", "usstocks_ret_ret"=>"8.0", "intlstocks_alloc_ret"=>"20", "intlstocks_ret_ret"=>"9.0", "bonds_alloc_ret"=>"40", "bonds_ret_ret"=>"3.0", "socialsecurity_income"=>"20000", "socialsecurity_startage"=>"67", "socialsecurity_inflation"=>"1", "pension_income"=>"0", "pension_startage"=>"65", "other_income"=>"0", "other_startage"=>"65", "education_expense"=>"0", "education_startage"=>"", "education_endage"=>"", "retirement_income"=>"65000", "retirement_startage"=>"65", "retirement_inflation"=>"1", "inflation_rate"=>"3.0", "ret_taxrate"=>"15", "id"=>"11"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (0.0ms)[0m  SELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (4.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.0ms)[0m  UPDATE "scenarios" SET "retplan_savings" = ?, "updated_at" = ? WHERE "scenarios"."id" = ?  [["retplan_savings", 12000], ["updated_at", "2016-06-11 02:39:48.690988"], ["id", 11]]
+  [1m[36m (52.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/scenarios
+Completed 302 Found in 400ms (ActiveRecord: 66.1ms)
+
+
+Started GET "/scenarios" for ::1 at 2016-06-10 21:39:49 -0500
+Processing by ScenariosController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mScenario Load (2.0ms)[0m  [1mSELECT "scenarios".* FROM "scenarios"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered scenarios/index.html.erb within layouts/application (87.6ms)
+Completed 200 OK in 728ms (Views: 704.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/retirement/11" for ::1 at 2016-06-10 21:39:53 -0500
+Processing by ScenariosController#retirement as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (0.5ms)[0m  SELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered scenarios/retirement.html.erb within layouts/application (461.8ms)
+Completed 200 OK in 1010ms (Views: 984.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/scenarios" for ::1 at 2016-06-10 21:41:52 -0500
+Processing by ScenariosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (0.5ms)[0m  SELECT "scenarios".* FROM "scenarios"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered scenarios/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 196ms (Views: 186.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/retirement/10" for ::1 at 2016-06-10 21:42:13 -0500
+Processing by ScenariosController#retirement as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mScenario Load (0.0ms)[0m  [1mSELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered scenarios/retirement.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 252ms (Views: 242.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/delete_scenario/11" for ::1 at 2016-06-10 21:42:24 -0500
+Processing by ScenariosController#destroy as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mScenario Load (0.0ms)[0m  [1mSELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.5ms)[0m  [1mDELETE FROM "scenarios" WHERE "scenarios"."id" = ?[0m  [["id", 11]]
+  [1m[35m (13.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/scenarios
+Completed 302 Found in 31ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/scenarios" for ::1 at 2016-06-10 21:42:24 -0500
+Processing by ScenariosController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (1.0ms)[0m  SELECT "scenarios".* FROM "scenarios"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered scenarios/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 138ms (Views: 132.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/scenarios/10/edit" for ::1 at 2016-06-10 21:43:17 -0500
+Processing by ScenariosController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (0.0ms)[0m  SELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered scenarios/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 432ms (Views: 412.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/update_scenario/10" for ::1 at 2016-06-10 21:44:58 -0500
+Processing by ScenariosController#update as HTML
+  Parameters: {"authenticity_token"=>"JVw5/LYphs6/ZUDl/f2HPFYo3folo2Xuc2zGUwlbKizrpGjHh2RkCUxDFzc6OvioSIWgpOn9m0DKhbQ0LYfbxQ==", "user_id"=>"1", "name"=>"Plan for a Friend", "description"=>"A plan for a friend who wants to retire at 60", "current_age"=>"25", "life_expectancy"=>"100", "retplan_assets"=>"30000", "retplan_savings"=>"10000", "retplan_inflation"=>"1", "tradira_assets"=>"0", "tradira_savings"=>"0", "rothira_assets"=>"0", "rothira_savings"=>"2000", "rothira_inflation"=>"1", "taxaccount_assets"=>"0", "taxaccount_savings"=>"0", "usstocks_alloc_pre"=>"50", "usstocks_ret_pre"=>"8.0", "intlstocks_alloc_pre"=>"30", "intlstocks_ret_pre"=>"9.0", "bonds_alloc_pre"=>"20", "bonds_ret_pre"=>"3.0", "usstocks_alloc_ret"=>"40", "usstocks_ret_ret"=>"8.0", "intlstocks_alloc_ret"=>"20", "intlstocks_ret_ret"=>"9.0", "bonds_alloc_ret"=>"40", "bonds_ret_ret"=>"3.0", "socialsecurity_income"=>"20000", "socialsecurity_startage"=>"67", "socialsecurity_inflation"=>"1", "pension_income"=>"0", "pension_startage"=>"65", "other_income"=>"0", "other_startage"=>"65", "education_expense"=>"10000", "education_startage"=>"35", "education_endage"=>"38", "education_inflation"=>"1", "retirement_income"=>"70000", "retirement_startage"=>"60", "retirement_inflation"=>"1", "inflation_rate"=>"3.0", "ret_taxrate"=>"15", "id"=>"10"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (0.5ms)[0m  SELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.5ms)[0m  UPDATE "scenarios" SET "education_inflation" = ?, "education_endage" = ?, "education_startage" = ?, "education_expense" = ?, "socialsecurity_inflation" = ?, "updated_at" = ? WHERE "scenarios"."id" = ?  [["education_inflation", "t"], ["education_endage", 38], ["education_startage", 35], ["education_expense", 10000], ["socialsecurity_inflation", "t"], ["updated_at", "2016-06-11 02:44:58.318854"], ["id", 10]]
+  [1m[36m (40.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/scenarios
+Completed 302 Found in 202ms (ActiveRecord: 47.0ms)
+
+
+Started GET "/scenarios" for ::1 at 2016-06-10 21:44:58 -0500
+Processing by ScenariosController#index as HTML
+  [1m[35mUser Load (4.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mScenario Load (1.0ms)[0m  [1mSELECT "scenarios".* FROM "scenarios"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered scenarios/index.html.erb within layouts/application (134.6ms)
+Completed 200 OK in 802ms (Views: 752.6ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/retirement/10" for ::1 at 2016-06-10 21:45:02 -0500
+Processing by ScenariosController#retirement as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (2.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mScenario Load (0.0ms)[0m  [1mSELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered scenarios/retirement.html.erb within layouts/application (273.7ms)
+Completed 200 OK in 783ms (Views: 720.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/scenarios/10/edit" for ::1 at 2016-06-10 21:46:13 -0500
+Processing by ScenariosController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mScenario Load (0.5ms)[0m  [1mSELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered scenarios/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 519ms (Views: 492.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/update_scenario/10" for ::1 at 2016-06-10 21:46:24 -0500
+Processing by ScenariosController#update as HTML
+  Parameters: {"authenticity_token"=>"wlhAdYoueOHFwY36Eh9x/Dbwrg6ArWsEIMAuSqWKxL0MoBFOu2OaJjbn2ijV2A5oKF3TUEzzlaqZKVwtgVY1VA==", "user_id"=>"1", "name"=>"Plan for a Friend", "description"=>"A plan for a friend who wants to retire at 60", "current_age"=>"25", "life_expectancy"=>"100", "retplan_assets"=>"30000", "retplan_savings"=>"10000", "retplan_inflation"=>"1", "tradira_assets"=>"0", "tradira_savings"=>"0", "rothira_assets"=>"0", "rothira_savings"=>"2000", "rothira_inflation"=>"1", "taxaccount_assets"=>"0", "taxaccount_savings"=>"0", "usstocks_alloc_pre"=>"50", "usstocks_ret_pre"=>"8.0", "intlstocks_alloc_pre"=>"30", "intlstocks_ret_pre"=>"9.0", "bonds_alloc_pre"=>"20", "bonds_ret_pre"=>"3.0", "usstocks_alloc_ret"=>"40", "usstocks_ret_ret"=>"8.0", "intlstocks_alloc_ret"=>"20", "intlstocks_ret_ret"=>"9.0", "bonds_alloc_ret"=>"40", "bonds_ret_ret"=>"3.0", "socialsecurity_income"=>"20000", "socialsecurity_startage"=>"67", "socialsecurity_inflation"=>"1", "pension_income"=>"0", "pension_startage"=>"65", "other_income"=>"0", "other_startage"=>"65", "education_expense"=>"10000", "education_startage"=>"35", "education_endage"=>"38", "education_inflation"=>"1", "retirement_income"=>"70000", "retirement_startage"=>"65", "retirement_inflation"=>"1", "inflation_rate"=>"3.0", "ret_taxrate"=>"15", "id"=>"10"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mScenario Load (0.5ms)[0m  [1mSELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (2.5ms)[0m  begin transaction
+  [1m[36mSQL (9.5ms)[0m  [1mUPDATE "scenarios" SET "retirement_startage" = ?, "updated_at" = ? WHERE "scenarios"."id" = ?[0m  [["retirement_startage", 65], ["updated_at", "2016-06-11 02:46:24.371949"], ["id", 10]]
+  [1m[35m (22.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/scenarios
+Completed 302 Found in 220ms (ActiveRecord: 37.0ms)
+
+
+Started GET "/scenarios" for ::1 at 2016-06-10 21:46:24 -0500
+Processing by ScenariosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (0.5ms)[0m  SELECT "scenarios".* FROM "scenarios"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered scenarios/index.html.erb within layouts/application (83.1ms)
+Completed 200 OK in 662ms (Views: 654.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/retirement/10" for ::1 at 2016-06-10 21:46:28 -0500
+Processing by ScenariosController#retirement as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mScenario Load (0.5ms)[0m  SELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered scenarios/retirement.html.erb within layouts/application (528.4ms)
+Completed 200 OK in 1008ms (Views: 993.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-14 23:47:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ScenariosController#index as HTML
+Completed 401 Unauthorized in 36ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-06-14 23:47:47 -0500
+Processing by Devise::SessionsController#new as HTML
+DEPRECATION WARNING: [Devise] Changing the sanitized parameters through "Devise::ParameterSanitizer#for(sign_up) is deprecated and it will be removed from Devise 4.2.
+Please use the `permit` method to add or remove any key:
+
+  To add any new key, use the `keys` keyword argument:
+  devise_parameter_sanitizer.permit(:sign_up, keys: [:param1, :param2, :param3])
+
+  To remove any existing key, use the `except` keyword argument:
+  devise_parameter_sanitizer.permit(:sign_up, except: [:email])
+ (called from configure_permitted_parameters at C:/Users/Tim/Box Sync/Booth/App Development/retirement_planner/app/controllers/application_controller.rb:11)
+DEPRECATION WARNING: [Devise] Changing the sanitized parameters through "Devise::ParameterSanitizer#for(sign_up) is deprecated and it will be removed from Devise 4.2.
+Please use the `permit` method to add or remove any key:
+
+  To add any new key, use the `keys` keyword argument:
+  devise_parameter_sanitizer.permit(:sign_up, keys: [:param1, :param2, :param3])
+
+  To remove any existing key, use the `except` keyword argument:
+  devise_parameter_sanitizer.permit(:sign_up, except: [:email])
+ (called from configure_permitted_parameters at C:/Users/Tim/Box Sync/Booth/App Development/retirement_planner/app/controllers/application_controller.rb:12)
+DEPRECATION WARNING: [Devise] Changing the sanitized parameters through "Devise::ParameterSanitizer#for(account_update) is deprecated and it will be removed from Devise 4.2.
+Please use the `permit` method to add or remove any key:
+
+  To add any new key, use the `keys` keyword argument:
+  devise_parameter_sanitizer.permit(:account_update, keys: [:param1, :param2, :param3])
+
+  To remove any existing key, use the `except` keyword argument:
+  devise_parameter_sanitizer.permit(:account_update, except: [:email])
+ (called from configure_permitted_parameters at C:/Users/Tim/Box Sync/Booth/App Development/retirement_planner/app/controllers/application_controller.rb:14)
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (177.0ms)
+Completed 200 OK in 960ms (Views: 866.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/highcharts/highcharts.self-4923f9ed2665d141bf958caf9ad472e43583563e4ce0ad4ca0bed37cc4472ba0.js?body=1" for ::1 at 2016-06-14 23:47:48 -0500
+
+
+Started GET "/assets/highcharts/highstock.self-a066661a93ab30ce7c0a06713b0fccc8fe05b951fea95f406f171f83abf9a020.js?body=1" for ::1 at 2016-06-14 23:47:48 -0500
+
+
+Started GET "/assets/highcharts/highcharts-more.self-0e0c54c859f9ff14946cc48cd859bd50d3d45b1b2f33464e4a50bd52776702ca.js?body=1" for ::1 at 2016-06-14 23:47:48 -0500
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for ::1 at 2016-06-14 23:47:48 -0500
+
+
+Started POST "/users/sign_in" for ::1 at 2016-06-14 23:48:03 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pj4q2jOtT8YIj/cGbfj/N/NlmEM22zaP6R6wlq7O8dRGbNcNraXraR9MlC+3qOVflGifEpMfh3oWUKMzdZ5j+w==", "user"=>{"email"=>"tim@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+DEPRECATION WARNING: [Devise] Changing the sanitized parameters through "Devise::ParameterSanitizer#for(sign_up) is deprecated and it will be removed from Devise 4.2.
+Please use the `permit` method to add or remove any key:
+
+  To add any new key, use the `keys` keyword argument:
+  devise_parameter_sanitizer.permit(:sign_up, keys: [:param1, :param2, :param3])
+
+  To remove any existing key, use the `except` keyword argument:
+  devise_parameter_sanitizer.permit(:sign_up, except: [:email])
+ (called from configure_permitted_parameters at C:/Users/Tim/Box Sync/Booth/App Development/retirement_planner/app/controllers/application_controller.rb:11)
+DEPRECATION WARNING: [Devise] Changing the sanitized parameters through "Devise::ParameterSanitizer#for(sign_up) is deprecated and it will be removed from Devise 4.2.
+Please use the `permit` method to add or remove any key:
+
+  To add any new key, use the `keys` keyword argument:
+  devise_parameter_sanitizer.permit(:sign_up, keys: [:param1, :param2, :param3])
+
+  To remove any existing key, use the `except` keyword argument:
+  devise_parameter_sanitizer.permit(:sign_up, except: [:email])
+ (called from configure_permitted_parameters at C:/Users/Tim/Box Sync/Booth/App Development/retirement_planner/app/controllers/application_controller.rb:12)
+DEPRECATION WARNING: [Devise] Changing the sanitized parameters through "Devise::ParameterSanitizer#for(account_update) is deprecated and it will be removed from Devise 4.2.
+Please use the `permit` method to add or remove any key:
+
+  To add any new key, use the `keys` keyword argument:
+  devise_parameter_sanitizer.permit(:account_update, keys: [:param1, :param2, :param3])
+
+  To remove any existing key, use the `except` keyword argument:
+  devise_parameter_sanitizer.permit(:account_update, except: [:email])
+ (called from configure_permitted_parameters at C:/Users/Tim/Box Sync/Booth/App Development/retirement_planner/app/controllers/application_controller.rb:14)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "tim@example.com"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-06-11 01:33:19.252106"], ["current_sign_in_at", "2016-06-15 04:48:03.454794"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 10], ["updated_at", "2016-06-15 04:48:03.458795"], ["id", 1]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 493ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/" for ::1 at 2016-06-14 23:48:03 -0500
+Processing by ScenariosController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mScenario Load (0.0ms)[0m  [1mSELECT "scenarios".* FROM "scenarios"[0m
+  [1m[35mUser Load (4.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered scenarios/index.html.erb within layouts/application (132.5ms)
+Completed 200 OK in 305ms (Views: 250.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/retirement/10" for ::1 at 2016-06-14 23:48:06 -0500
+Processing by ScenariosController#retirement as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mScenario Load (0.0ms)[0m  [1mSELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered scenarios/retirement.html.erb within layouts/application (136.6ms)
+Completed 200 OK in 323ms (Views: 298.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/scenarios/10/edit" for ::1 at 2016-06-14 23:49:38 -0500
+Processing by ScenariosController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mScenario Load (0.0ms)[0m  [1mSELECT  "scenarios".* FROM "scenarios" WHERE "scenarios"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered scenarios/edit.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 137ms (Views: 121.4ms | ActiveRecord: 0.0ms)
