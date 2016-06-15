@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "starter_generators", :git => "http://github.com/raghubetina/starter_generators.git"
+# gem "starter_generators", :git => "http://github.com/raghubetina/starter_generators.git"
 gem 'devise'
 gem 'lazy_high_charts'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

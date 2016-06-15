@@ -1,9 +1,3 @@
-GIT
-  remote: http://github.com/raghubetina/starter_generators.git
-  revision: ce5054d2da99912b666a6daf120e5fe487163cbc
-  specs:
-    starter_generators (0.9.6)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -183,7 +177,6 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   sqlite3
-  starter_generators!
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
